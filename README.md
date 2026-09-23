@@ -11,7 +11,9 @@ The included firmware reads the native command stream and demonstrates command r
 
 * [Build guide: wiring, board layout, harness, photos, and operation](./SCP_SCPC_GitHub_Build_Guide.pdf)
 * [Arduino firmware](./scp_scpc_pressure_control.ino)
-* [MIT License](./LICENSE)
+## License
+
+The Arduino firmware is licensed under the PolyForm Noncommercial License 1.0.0. The build guide and original photos are licensed under Creative Commons Attribution-NonCommercial 4.0 International. Commercial use requires separate permission from the author.
 
 ## Research use and disclaimer
 
