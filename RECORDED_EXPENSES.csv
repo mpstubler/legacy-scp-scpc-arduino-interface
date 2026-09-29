@@ -1,0 +1,31 @@
+Date,Vendor,Item,Category,Purpose,Cost_USD,Project_Specific_as_recorded,Notes_as_recorded
+2026-03-30,AliExpress,MKS CANable Pro (Isolated),Signal Analysis,CAN investigation / SocketCAN,23.81,Yes,Critical for ruling out CAN control path
+2026-03-30,AliExpress,MHCN United Co. Ltd Order,Misc Electronics,Unknown miscellaneous electronics,16.58,Partial,Need identification later
+2026-04-18,Amazon,HiLetgo 24MHz 8CH Logic Analyzer,Signal Analysis,Protocol capture / PulseView,12.69,Yes,Primary signal characterization tool
+2026-04-18,AliExpress,IC Test Clip Set,Signal Access,Non-destructive probing,10.37,Yes,Used for inline probing and signal access
+2026-04-18,AliExpress,P1308B Probe/Test Lead Kit,Measurement,Signal measurement,13.13,Yes,"Hooks, probes, and alligator leads"
+2026-04-18,AliExpress,Soldering Clamp Set,Fabrication,Bench assembly support,2.32,Partial,General-purpose assembly tool
+2026-04-23,AliExpress,SN-58B Ratcheting Crimper,Harness Fabrication,Dupont/JST crimping,10.95,Partial,Reusable electronics infrastructure
+2026-04-23,AliExpress,MB-102 Breadboard Kit,Prototyping,Circuit prototyping,4.88,Yes,Initial prototype platform
+2026-04-23,AliExpress,620pc Dupont Header Kit,Connectors,General interconnects,6.21,Partial,Reusable inventory
+2026-04-23,AliExpress,Dupont Jumper Kit 20cm,Connectors,Prototyping jumpers,6.02,Partial,Reusable inventory
+2026-04-23,AliExpress,Nano Expansion Shield,Breakout Hardware,Quick breakout/testing,2.13,Partial,General utility hardware
+2026-04-23,AliExpress,Dupont Jumper Kit 10cm,Connectors,Prototyping jumpers,5.53,Partial,Reusable inventory
+2026-05-06,Micro Center,Arduino Uno R4 Minima,Microcontroller,Realtime capture and decode platform,19.99,Yes,Primary experimental platform
+2026-05-06,Micro Center,Adafruit Parts Pal,Organization,Parts storage and organization,19.95,No,Bench organization only
+2026-05-06,Mouser,SN74HC125N Quad Bus Buffer,Injection Hardware,Buffered inline interfacing,6.30,Yes,Important for communication-layer injection
+2026-05-06,Mouser,DFRobot Gravity Relay Module,Automation,General switching/control,6.66,Partial,May support future automation experiments
+2026-05-06,Mouser,14-pin IC Sockets,Prototyping,Socketed IC testing,5.94,Yes,Rapid iteration and device replacement
+2026-05-06,Mouser,SparkFun TXS0108E Level Shifter,Injection Hardware,Voltage translation,7.13,Yes,Mixed-voltage interfacing
+2026-05-06,Mouser,KF301 Screw Terminal Blocks,Connectors,Modular wiring,4.18,Partial,Reusable wiring infrastructure
+2026-05-06,Mouser,Shipping / Fees,Shipping,Order overhead,8.49,Yes,Procurement overhead
+2026-05-06,AliExpress,FR4 Prototype PCB Boards,Prototyping,Perfboard prototyping,4.02,Yes,Prototype construction
+2026-05-06,AliExpress,22 AWG Silicone Wire,Wiring,Harness and prototype wiring,2.62,Partial,General consumable
+2026-05-06,AliExpress,Brass NPT Hose Barb Fitting,Fluid System,Pressure sensor plumbing,4.00,Yes,Pressure-loop development
+2026-05-06,AliExpress,KF301 Screw Terminal Kit,Connectors,Modular wiring,7.91,Partial,Reusable inventory
+2026-05-06,AliExpress,5V 30 PSI Pressure Transducer,Instrumentation,Pressure monitoring,11.51,Yes,Pressure-control demonstration
+2026-05-06,AliExpress,Heat Shrink Kit,Wiring,Harness protection,3.80,Partial,General consumable
+2026-05-31,Micro Center,IPSG Jumper Wire Bundle 3pcs,Wiring,Rapid prototyping and signal routing,9.99,Yes,Used during interface development
+2026-05-31,Micro Center,iFixit Solder Tip Cleaner,Fabrication,Soldering maintenance,9.99,Partial,General bench infrastructure
+2026-05-31,Micro Center,SchmartBoard 0.1in Spacing 80 Dual Row,Prototyping,DIP breakout and interface construction,8.49,Yes,Prototype interface circuits
+2026-05-31,Micro Center,Adafruit Perma-Proto 3 Pack,Prototyping,Semi-permanent prototype construction,12.50,Yes,Transition from breadboard to stable prototype
