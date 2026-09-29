@@ -19,7 +19,7 @@ For someone attempting to understand or reproduce the demonstrated system:
 
 1. **[Build guide](./SCP_SCPC_GitHub_Build_Guide.pdf)** — wiring, connector pinout, removable harness, interface circuit, photographs, and operating procedure
 2. **[Arduino firmware](./scp_scpc_pressure_control.ino)** — native command decoding, replay, bounded offsets, relay control, and pressure-feedback demonstration
-3. **[Hardware and software reference](./Hardware_and_Software_Required.md)** — components, development tools, software, documentation links, and known gaps in the historical record
+3. **[Hardware and software reference](./Hardware_and_Software.md)** — components, development tools, software, documentation links, and known gaps in the historical record
 4. **[Recorded expenses](./RECORDED_EXPENSES.csv)** — itemized development purchases and a summary of project spending
 5. **Representative signal captures** — example recordings used during interface characterization
 
