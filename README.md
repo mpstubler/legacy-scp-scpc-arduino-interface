@@ -71,7 +71,7 @@ Recorded development spending was:
 
 These values describe historical project purchases, not the minimum cost of reproducing one interface. The purchases include reusable tools, multipacks, exploratory components, and general bench supplies. Existing pump equipment, computers, labor, and some pre-existing supplies are not included.
 
-![Recorded development spending by category](assets/recorded_expenses.png)
+![Recorded development spending by category](recorded_expenses.png)
 
 ## Scope of the reverse engineering
 
