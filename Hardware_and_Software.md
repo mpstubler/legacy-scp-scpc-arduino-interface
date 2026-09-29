@@ -12,7 +12,7 @@ Research use only. The system was demonstrated with surrogate fluid, not patient
 
 The 30 purchase lines total **\$268.09 before tax**, including **\$8.49 in shipping or fees**. The workbook reports **\$291.21 as “actual spent”** after rounding. The \$23.12 difference is not allocated to individual items in this document. These are historical recorded purchases, not current quotations or a complete cost to reproduce the system.
 
-![][image1]
+![Recorded development spending by category](recorded_expenses.png)
 
 The chart preserves the expense workbook’s original categories, including historical classifications that do not describe the final circuit. Both workbook tabs repeat the same purchases; each line is counted once. Existing pump equipment, computers, development time, and unitemized supplies are outside this purchase total.
 
@@ -143,5 +143,3 @@ This reference reconciles the Canonical Dossier and Workday Timeline with the ch
 The repository revision reviewed was **abf0d6c55661ab5097691dda26416205331d9636**. This pins the public files reviewed for this inventory; it does not claim that this later published revision is byte-identical to every experimental sketch. The repository contains the illustrated PDF build guide, Arduino firmware, representative .sr captures, and license files. Follow the repository license terms for code and documentation.
 
 Public links identify manufacturer documentation, upstream software, or the project itself. Unknown listings and versions remain explicitly unknown. Product pages establish identity and specifications; they do not validate this research assembly. The inventory should be updated when the missing identifiers are recovered. If a build-critical detail is missing or unclear, contact the author through the project repository; additional historical material may be available even where exploratory files were not organized for release.
-
-![Recorded development spending by category](recorded_expenses.png)
