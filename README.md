@@ -128,7 +128,7 @@ Development of the interface also demonstrated that experimental manipulation of
 
 ## License
 
-The Arduino firmware is licensed under the **[PolyForm Noncommercial License 1.0.0](./LICENSE-CODE)**.
+The Arduino firmware is licensed under the **[PolyForm Noncommercial License 1.0.0](./LICENSE-CODE.md)**.
 
 The build guide, original photographs, and project documentation are licensed under **[Creative Commons Attribution-NonCommercial 4.0 International](./LICENSE-DOCS.md)**.
 
