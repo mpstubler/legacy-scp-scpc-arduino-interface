@@ -1,6 +1,8 @@
-# SCP/SCPC Arduino Command Interface
+# SCP/SCPC Semi-Autonomous Arduino Interface
 
 A removable Arduino interface for bench control of a permanently decommissioned Sorin SCP/SCPC centrifugal pump.
+
+**Confused what you're looking at? [Start here.](./WHAT_AM_I_LOOKING_AT.md)**
 
 The interface connects at ZPR 9909 A / CON2 and intercepts only the DATA line while leaving the native CLOCK, FRAME, TACH, motor drive, and pump electronics in place. A relay provides a direct native DATA path when deenergized. Relay fallback therefore returns command control to the original pump panel; it is not a pump-stop function.
 
