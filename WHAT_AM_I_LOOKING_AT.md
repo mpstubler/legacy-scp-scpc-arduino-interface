@@ -8,11 +8,11 @@ Mainly for ex vivo perfusion research, such as organ preservation for transplant
 
 Instead of someone sitting at the pump adjusting flow and recording measurements, the pump can respond automatically to measured variables while the experiment logs the data.
 
-It also creates a way to reuse otherwise functional clinical hardware after retirement. Older perfusion systems and components are often available inexpensively through surplus and secondary markets.
+It also creates a way to reuse otherwise functional clinical hardware after retirement. Older perfusion systems and components are often used on eBay and similar at prices within grant limits.
 
 ## Is this a finished project?
 
-No. It's a proof-of-concept.
+No. It's a proof-of-concept. This pump was never the end goal.
 
 The SCP/SCPC is relatively uncommon and two generations behind current systems. The point was never this specific pump.
 
