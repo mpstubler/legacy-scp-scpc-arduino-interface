@@ -20,6 +20,6 @@ The goal was to show that reverse-engineering a retired clinical pump and adding
 
 ## What is in this repository?
 
-Code, wiring, notes, demos, and enough documentation to follow what was done and reproduce the interface I built.
+Code, wiring, notes, demos, and enough documentation to reproduce the interface I built.
 
 **Research use only. Not intended for clinical use.**
