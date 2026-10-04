@@ -12,7 +12,7 @@ It also creates a way to reuse otherwise functional clinical hardware after reti
 
 ## Is this a finished project?
 
-No. It's a proof-of-concept. This pump was never the end goal.
+No. It's a proof-of-concept. 
 
 The SCP/SCPC is relatively uncommon and two generations behind current systems. The point was never this specific pump.
 
