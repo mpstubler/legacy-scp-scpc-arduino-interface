@@ -8,11 +8,11 @@ Mainly for ex vivo perfusion research, such as organ preservation for transplant
 
 Instead of someone sitting at the pump adjusting flow and recording measurements, the pump can respond automatically to measured variables while the experiment logs the data.
 
-It also creates a way to reuse otherwise functional clinical hardware after retirement. Older perfusion systems and components are often used on eBay and similar at prices within grant limits.
+It also creates a way to reuse otherwise functional clinical hardware after retirement. Older perfusion systems and components can often be found used on eBay and similar markets at prices within grant limits.
 
 ## Is this a finished project?
 
-No. It's a proof-of-concept. 
+No. It's a proof-of-concept.
 
 The SCP/SCPC is relatively uncommon and two generations behind current systems. The point was never this specific pump.
 
@@ -20,6 +20,6 @@ The goal was to show that reverse-engineering a retired clinical pump and adding
 
 ## What is in this repository?
 
-Code, wiring, notes, demos, and enough documentation to follow what was done and reproduce the interface I built
+Code, wiring, notes, demos, and enough documentation to follow what was done and reproduce the interface I built.
 
 **Research use only. Not intended for clinical use.**
