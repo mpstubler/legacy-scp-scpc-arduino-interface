@@ -15,7 +15,7 @@ The included Arduino firmware reads the native command stream and demonstrates:
 
 The goal of the project is not to reproduce the complete SCP/SCPC communication protocol. It is to document the minimum recovered interface needed to reuse the existing pump hardware as a programmable research platform.
 
-## Start here
+## How to Use
 
 For someone attempting to understand or reproduce the demonstrated system:
 
