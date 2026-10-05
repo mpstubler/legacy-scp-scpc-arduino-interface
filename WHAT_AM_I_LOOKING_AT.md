@@ -22,4 +22,12 @@ The goal was to show that reverse-engineering a retired clinical pump and adding
 
 Code, wiring, notes, demos, and enough documentation to reproduce the interface I built.
 
+## Experimental setup
+
+<p align="center">
+  <img src="pump-saline-loop.png" alt="Retired SCP/SCPC pump with the experimental saline loop used for the pressure-control demonstration" width="550">
+</p>
+
+The retired SCP/SCPC pump with the experimental saline loop used to demonstrate pressure-feedback control.
+
 **Research use only. Not intended for clinical use.**
