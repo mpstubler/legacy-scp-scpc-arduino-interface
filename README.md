@@ -1,37 +1,49 @@
 # SCP/SCPC Semi-Autonomous Arduino Interface
 
-A removable Arduino interface for bench control of a permanently decommissioned Sorin SCP/SCPC centrifugal pump.
+**Reverse-engineered native pump commands, with a pressure-feedback demonstration.**
+
+A removable Arduino interface for bench control of a permanently decommissioned Sorin SCP/SCPC centrifugal pump. The project recovered the native command field and timing needed to inject modified commands while retaining the original motor drive and pump electronics.
 
 <p align="center">
-  <img src="pump-saline-loop.png" alt="Benchtop pump and saline loop" width="450">
+  <img src="system-overview.png" alt="Reverse-engineered SCP/SCPC interface: Arduino reads native pump commands and supplies replacement CMD16 commands through a relay, with native fallback and a pressure-feedback demonstration." width="1100">
+</p>
+
+<p align="center">
+  <sub>Simplified system overview. The pressure-feedback loop demonstrates one use of the recovered command interface.</sub>
 </p>
 
 **Confused what you're looking at? [Start here.](./WHAT_AM_I_LOOKING_AT.md)**
 
-The interface connects at ZPR 9909 A / CON2 and intercepts only the DATA line while leaving the native CLOCK, FRAME, TACH, motor drive, and pump electronics in place. A relay provides a direct native DATA path when deenergized. Relay fallback therefore returns command control to the original pump panel; it is not a pump-stop function.
+[Build guide](./SCP_SCPC_GitHub_Build_Guide.pdf) · [Firmware](./scp_scpc_pressure_control.ino) · [Hardware & software](./Hardware_and_Software.md) · [Signal captures](#representative-signal-captures) · [Development costs](#development-costs)
 
-The included Arduino firmware reads the native command stream and demonstrates:
+## Interface overview
 
-- synchronized command replay
-- bounded modification of the native command
-- return to native control
-- pressure-feedback control in a surrogate-fluid benchtop circuit
+| Native system | Added interface | Demonstrated capability |
+| --- | --- | --- |
+| Original control panel and command timing | Read the recurring native command field | Synchronized command replay |
+| Original motor drive and pump electronics | Inject bounded modifications to native-format commands | Programmable bench control |
+| Direct native DATA path | Relay selection of native or replacement DATA | Return to native control |
+| Surrogate-fluid benchtop circuit | Pressure signal used to adjust the replacement command | Pressure-feedback control |
 
-The goal of the project is not to reproduce the complete SCP/SCPC communication protocol. It is to document the minimum recovered interface needed to reuse the existing pump hardware as a programmable research platform.
+The interface connects at **ZPR 9909 A / CON2** and intercepts only **DATA**. Native CLOCK, FRAME, TACH, motor drive, and pump electronics remain in place. A relay provides a direct native DATA path when deenergized.
 
-## How to Use
+**Relay fallback restores command control to the original pump panel. It does not stop the pump.**
+
+The goal is to document the minimum recovered interface needed to reuse existing pump hardware as a programmable research platform. Complete SCP/SCPC protocol emulation was outside the scope of the project.
+
+## How to use
 
 For someone attempting to understand or reproduce the demonstrated system:
 
-1. **[Build guide](./SCP_SCPC_GitHub_Build_Guide.pdf)** — wiring, connector pinout, removable harness, interface circuit, photographs, and operating procedure
-2. **[Arduino firmware](./scp_scpc_pressure_control.ino)** — native command decoding, replay, bounded offsets, relay control, and pressure-feedback demonstration
-3. **[Hardware and software reference](./Hardware_and_Software.md)** — components, development tools, software, documentation links, and known gaps in the historical record
-4. **[Recorded expenses](./RECORDED_EXPENSES.csv)** — itemized development purchases and a summary of project spending
-5. **Representative signal captures** — example recordings used during interface characterization
+| Resource | Contents |
+| --- | --- |
+| **[Build guide](./SCP_SCPC_GitHub_Build_Guide.pdf)** | Wiring, connector pinout, removable harness, interface circuit, photographs, and operating procedure |
+| **[Arduino firmware](./scp_scpc_pressure_control.ino)** | Native command decoding, replay, bounded offsets, relay control, and pressure-feedback demonstration |
+| **[Hardware and software reference](./Hardware_and_Software.md)** | Components, development tools, software, documentation links, and known gaps in the historical record |
+| **[Recorded expenses](./RECORDED_EXPENSES.csv)** | Itemized development purchases and a summary of project spending |
+| **[Representative signal captures](#representative-signal-captures)** | Example recordings used during interface characterization |
 
-## Repository contents
-
-### Build guide
+## Build guide
 
 The illustrated build guide documents the final working interface, including:
 
@@ -44,7 +56,7 @@ The illustrated build guide documents the final working interface, including:
 - pressure-feedback setup
 - operating and fallback procedure
 
-### Firmware
+## Firmware
 
 The [Arduino firmware](./scp_scpc_pressure_control.ino) implements the final demonstrated control system.
 
@@ -62,7 +74,7 @@ Where a sterile fluid pathway is required, isolate the reusable transducer from 
 
 The demonstrated controller primarily treated the sensor as an analog signal source referenced to an operator-selected baseline rather than as a calibrated absolute-pressure instrument. Pressure-control values and thresholds in the published demonstration firmware are therefore based on raw/filtered ADC counts, not calibrated pressure units.
 
-### Hardware and software reference
+## Hardware and software reference
 
 The [hardware and software reference](./Hardware_and_Software.md) provides a consolidated description of the hardware, software, bench equipment, and development tools documented during the project.
 
@@ -76,20 +88,20 @@ It distinguishes:
 
 Where available, links are provided to manufacturer or upstream project documentation.
 
-### Development costs
+## Development costs
 
 [`RECORDED_EXPENSES.csv`](./RECORDED_EXPENSES.csv) contains the 30 purchase lines preserved in the project expense record.
 
-Recorded development spending was:
-
-- **$268.09 before tax**
-- **$291.21 reported actual spending**
+| Recorded development spending | Amount |
+| --- | ---: |
+| Before tax | **$268.09** |
+| Reported actual spending | **$291.21** |
 
 These values describe historical project purchases, not the minimum cost of reproducing one interface. The purchases include reusable tools, multipacks, exploratory components, and general bench supplies. Existing pump equipment, computers, labor, and some pre-existing supplies are not included.
 
 ![Recorded development spending by category](recorded_expenses.png)
 
-### Representative signal captures
+## Representative signal captures
 
 The repository includes representative `.sr` logic-analyzer recordings used during interface characterization:
 
@@ -134,9 +146,10 @@ Development of the interface also demonstrated that experimental manipulation of
 
 ## License
 
-The Arduino firmware is licensed under the **[PolyForm Noncommercial License 1.0.0](./LICENSE-CODE.md)**.
-
-The build guide, original photographs, and project documentation are licensed under **[Creative Commons Attribution-NonCommercial 4.0 International](./LICENSE-DOCS.md)**.
+| Material | License |
+| --- | --- |
+| Arduino firmware | **[PolyForm Noncommercial License 1.0.0](./LICENSE-CODE.md)** |
+| Build guide, original photographs, and project documentation | **[Creative Commons Attribution-NonCommercial 4.0 International](./LICENSE-DOCS.md)** |
 
 Commercial use requires separate permission from the author.
 
