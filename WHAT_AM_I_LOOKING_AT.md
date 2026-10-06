@@ -1,5 +1,7 @@
 # What am I looking at?
 
+[Project home](README.md) · [Watch the demonstrations](docs/DEMONSTRATIONS.md) · [Build & firmware](docs/BUILD_AND_FIRMWARE.md)
+
 A proof-of-concept for adding external control to a retired Sorin/Stöckert SCP/SCPC perfusion pump (heart-lung machine).
 
 ## Why would someone want to do that?
