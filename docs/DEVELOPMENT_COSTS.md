@@ -8,7 +8,7 @@ Historical recorded spending for the SCP/SCPC interface project. **This is not a
 
 The 30 purchase lines total **\$268.09 before tax**, including **\$8.49 in shipping or fees**. The workbook reports **\$291.21 as “actual spent”** after rounding. The \$23.12 difference is not allocated to individual items in this document. These are historical recorded purchases, not current quotations or a complete cost to reproduce the system.
 
-![Recorded development spending by category](../recorded_expenses.png)
+![Recorded development spending by category](../media/images/recorded_expenses.png)
 
 The chart preserves the expense workbook’s original categories, including historical classifications that do not describe the final circuit. Both workbook tabs repeat the same purchases; each line is counted once. Existing pump equipment, computers, development time, and unitemized supplies are outside this purchase total.
 
@@ -16,11 +16,11 @@ The chart preserves the expense workbook’s original categories, including hist
 
 Purchases include reusable tools, multipacks, exploratory components, and general bench supplies. Existing pump equipment, computers, labor, and some pre-existing supplies are not included. Purchased quantities, spare inventory, and unitemized components are mixed, so a reliable minimum one-unit build cost cannot be derived from this ledger.
 
-For the parts used in the final interface, start with the [hardware reference](../Hardware_and_Software.md) and [illustrated build guide](../SCP_SCPC_GitHub_Build_Guide.pdf). Exploratory purchases are not automatically required for reproduction.
+For the parts used in the final interface, start with the [hardware reference](Hardware_and_Software.md) and [illustrated build guide](SCP_SCPC_GitHub_Build_Guide.pdf). Exploratory purchases are not automatically required for reproduction.
 
 ## Itemized recorded purchases
 
-Amounts are USD purchase-line totals before tax. Descriptions and categories below follow the source spreadsheet, including provisional or outdated purpose labels. The [hardware and software reference](../Hardware_and_Software.md) establishes actual use where later evidence is available. The companion [RECORDED_EXPENSES.csv](../RECORDED_EXPENSES.csv) retains dates, original project-specific flags, purposes, and notes for all 30 lines.
+Amounts are USD purchase-line totals before tax. Descriptions and categories below follow the source spreadsheet, including provisional or outdated purpose labels. The [hardware and software reference](Hardware_and_Software.md) establishes actual use where later evidence is available. The companion [RECORDED_EXPENSES.csv](../data/RECORDED_EXPENSES.csv) retains dates, original project-specific flags, purposes, and notes for all 30 lines.
 
 | Recorded item | Vendor | Original category | USD |
 | :---- | :---- | :---- | ----: |

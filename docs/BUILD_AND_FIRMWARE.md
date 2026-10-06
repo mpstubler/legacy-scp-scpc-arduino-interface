@@ -7,9 +7,9 @@ This page is the entry point for understanding or reproducing the documented ben
 ## Start here
 
 1. Read the [safety architecture and research-use scope](SAFETY.md).
-2. Use the **[illustrated build guide (PDF)](../SCP_SCPC_GitHub_Build_Guide.pdf)** for connector orientation, wiring, removable harness, pre-power checks, and operating procedure.
-3. Check the [hardware and software reference](../Hardware_and_Software.md) for components, development tools, dependencies, and unresolved identifiers.
-4. Review the **[Arduino firmware](../scp_scpc_pressure_control.ino)** alongside the guide. For pressure feedback, also read the [instrumentation notes](PRESSURE_INSTRUMENTATION.md).
+2. Use the **[illustrated build guide (PDF)](SCP_SCPC_GitHub_Build_Guide.pdf)** for connector orientation, wiring, removable harness, pre-power checks, and operating procedure.
+3. Check the [hardware and software reference](Hardware_and_Software.md) for components, development tools, dependencies, and unresolved identifiers.
+4. Review the **[Arduino firmware](../firmware/scp_scpc_pressure_control/scp_scpc_pressure_control.ino)** alongside the guide. For pressure feedback, also read the [instrumentation notes](PRESSURE_INSTRUMENTATION.md).
 
 ## What the build guide covers
 

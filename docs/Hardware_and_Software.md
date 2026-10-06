@@ -1,22 +1,22 @@
 # SCP/SCPC Hardware and Software Reference
 
-[Project home](README.md) · [Build & firmware](docs/BUILD_AND_FIRMWARE.md) · [Development costs](docs/DEVELOPMENT_COSTS.md)
+[Project home](../README.md) · [Build & firmware](BUILD_AND_FIRMWARE.md) · [Development costs](DEVELOPMENT_COSTS.md)
 
 Matthew Stubler • Research build reference
 
 This document identifies the hardware, software, tools, and purchases documented during development of the removable Arduino interface for a permanently decommissioned Sorin SCP/SCPC centrifugal pump. It supports review of the project and planning a comparable bench build. The final interface requirements are separated from equipment used during reverse engineering and purchases whose eventual use is uncertain.
 
-The project demonstrated command replay, bounded command offsets, and pressure feedback in a recirculating saline circuit. Use this inventory alongside the [illustrated build guide](SCP_SCPC_GitHub_Build_Guide.pdf) and [firmware](scp_scpc_pressure_control.ino), which contain the wiring and operating details. This inventory alone is not an assembly procedure.
+The project demonstrated command replay, bounded command offsets, and pressure feedback in a recirculating saline circuit. Use this inventory alongside the [illustrated build guide](SCP_SCPC_GitHub_Build_Guide.pdf) and [firmware](../firmware/scp_scpc_pressure_control/scp_scpc_pressure_control.ino), which contain the wiring and operating details. This inventory alone is not an assembly procedure.
 
 Research use only. The system was demonstrated with surrogate fluid, not patients, animals, blood, or organs. Use only permanently decommissioned equipment. Relay fallback restores native DATA control; it does not stop the pump.
 
 ## Development costs
 
-The [development cost record](docs/DEVELOPMENT_COSTS.md) contains the historical spending summary, chart, and all 30 itemized purchases. It distinguishes development spending from the requirements for reproducing one interface.
+The [development cost record](DEVELOPMENT_COSTS.md) contains the historical spending summary, chart, and all 30 itemized purchases. It distinguishes development spending from the requirements for reproducing one interface.
 
 ## Hardware for the final interface
 
-Quantities below describe one interface where the build guide specifies them. Expense amounts in the [development cost record](docs/DEVELOPMENT_COSTS.md) are purchase-line totals and may cover multipacks or spare inventory. Manufacturer links identify the component family; they do not establish that a current retail revision is identical to the tested unit.
+Quantities below describe one interface where the build guide specifies them. Expense amounts in the [development cost record](DEVELOPMENT_COSTS.md) are purchase-line totals and may cover multipacks or spare inventory. Manufacturer links identify the component family; they do not establish that a current retail revision is identical to the tested unit.
 
 | Component and quantity | Function in this project | Identification and source |
 | :---- | :---- | :---- |
@@ -37,7 +37,7 @@ Quantities below describe one interface where the build guide specifies them. Ex
 
 The pressure demonstration adds a sensor and hydraulic loop to the command interface. Independent pressure measurement is needed to establish and observe the operating condition; the Arduino maintained a captured sensor signal rather than a calibrated pressure value.
 
-See [pressure instrumentation](docs/PRESSURE_INSTRUMENTATION.md) for the demonstration's ADC-based control values and measurement limitations.
+See [pressure instrumentation](PRESSURE_INSTRUMENTATION.md) for the demonstration's ADC-based control values and measurement limitations.
 
 ***Experimental-use recommendation:*** 
 
@@ -94,7 +94,7 @@ ChatGPT and Gemini assisted with technical explanations, code, analysis, and wri
 
 Remaining historical details include the exact original pressure-sensor listing and its electrical transfer function, accuracy, and wire assignments; the power-supply model/rating; relay-board revision; software/core versions; and disposable circuit/monitoring model numbers. A present-day replacement specification for the pressure sensor is given above, but its actual electrical output and pinout must still be verified before connection. The transistor and passive components lack separately attributed costs. Exact marketplace listings for generic tools and consumables were not recovered; replacement listings are not presented as the original purchases.
 
-A minimum one-unit build cost cannot be derived reliably from this ledger because purchased quantities, spare inventory, unitemized components, and existing equipment are mixed. The [development cost record](docs/DEVELOPMENT_COSTS.md) retains the complete purchase total instead of inventing a reduced bill of materials.
+A minimum one-unit build cost cannot be derived reliably from this ledger because purchased quantities, spare inventory, unitemized components, and existing equipment are mixed. The [development cost record](DEVELOPMENT_COSTS.md) retains the complete purchase total instead of inventing a reduced bill of materials.
 
 ## Evidence and document status
 

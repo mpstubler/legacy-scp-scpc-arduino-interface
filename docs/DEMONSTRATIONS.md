@@ -6,7 +6,9 @@ The two demonstrations show the recovered command interface in use on a surrogat
 
 ## Pressure-feedback control
 
-**[Watch the pressure-control demonstration](../PressureDemo_Revised.mp4)**
+[![Watch the pressure-control demonstration](../media/images/pressure-control.jpg)](../media/demos/pressure-control.mp4)
+
+**[Watch the pressure-control demonstration · 1 min](../media/demos/pressure-control.mp4)**
 
 The operator first establishes a bench operating condition under native control. Starting pressure mode captures the current filtered pressure-sensor reading and accepted native command. The Arduino then adjusts the replacement command around that baseline in response to changes in the pressure signal.
 
@@ -18,7 +20,9 @@ The target and feedback are **ADC counts, not calibrated pressure units**. This 
 
 ## Return to native control
 
-**[Watch the relay demonstration](../RelayDemo_Revised.mp4)**
+[![Watch the relay demonstration](../media/images/native-control-fallback.jpg)](../media/demos/native-control-fallback.mp4)
+
+**[Watch the relay demonstration · 56 sec](../media/demos/native-control-fallback.mp4)**
 
 Deenergizing the interface relay restores a direct native DATA path from the original pump panel to the motor-control board. The panel resumes command authority.
 
@@ -29,9 +33,9 @@ Deenergizing the interface relay restores a direct native DATA path from the ori
 ## Bench setup
 
 <p align="center">
-  <img src="../pump-saline-loop.png" alt="Retired SCP/SCPC pump and recirculating saline loop used for the pressure-feedback demonstration" width="650">
+  <img src="../media/images/pump-saline-loop.png" alt="Retired SCP/SCPC pump and recirculating saline loop used for the pressure-feedback demonstration" width="650">
 </p>
 
 The documented setup used a centrifugal pump head, perfusion tubing, saline-bag reservoir, adjustable downstream restriction, and an added analog pressure sensor alongside existing pressure monitoring. Displayed RPM and indicated flow were observed; the published Arduino sketch does not measure flow or RPM.
 
-See the [hardware reference](../Hardware_and_Software.md) for the documented components and unknown model numbers, or [build & firmware](BUILD_AND_FIRMWARE.md) for the illustrated assembly and operating guide.
+See the [hardware reference](Hardware_and_Software.md) for the documented components and unknown model numbers, or [build & firmware](BUILD_AND_FIRMWARE.md) for the illustrated assembly and operating guide.
