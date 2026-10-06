@@ -29,6 +29,6 @@ The feedback loop runs on the Arduino. The host computer supplies programming an
 
 ## Record limitations
 
-The exact original sensor listing, transfer function, accuracy, and wire assignments were not preserved. Generic marketplace listings do not establish the electrical behavior of an individual replacement unit. The [hardware reference](../Hardware_and_Software.md) records the known sensor and plumbing details and the remaining uncertainties.
+The exact original sensor listing, transfer function, accuracy, and wire assignments were not preserved. Generic marketplace listings do not establish the electrical behavior of an individual replacement unit. The [hardware reference](Hardware_and_Software.md) records the known sensor and plumbing details and the remaining uncertainties.
 
 See [build & firmware](BUILD_AND_FIRMWARE.md) for the source and operating guide, and [demonstrations](DEMONSTRATIONS.md) for the bench context.

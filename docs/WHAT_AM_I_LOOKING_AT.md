@@ -1,6 +1,6 @@
 # What am I looking at?
 
-[Project home](README.md) · [Watch the demonstrations](docs/DEMONSTRATIONS.md) · [Build & firmware](docs/BUILD_AND_FIRMWARE.md)
+[Project home](../README.md) · [Watch the demonstrations](DEMONSTRATIONS.md) · [Build & firmware](BUILD_AND_FIRMWARE.md)
 
 A proof-of-concept for adding external control to a retired Sorin/Stöckert SCP/SCPC perfusion pump (heart-lung machine).
 
@@ -27,7 +27,7 @@ Code, wiring, notes, demos, and enough documentation to reproduce the interface 
 ## Experimental setup
 
 <p align="center">
-  <img src="pump-saline-loop.png" alt="Retired SCP/SCPC pump with the experimental saline loop used for the pressure-control demonstration" width="550">
+  <img src="../media/images/pump-saline-loop.png" alt="Retired SCP/SCPC pump with the experimental saline loop used for the pressure-control demonstration" width="550">
 </p>
 
 The retired SCP/SCPC pump with the experimental saline loop used to demonstrate pressure-feedback control.

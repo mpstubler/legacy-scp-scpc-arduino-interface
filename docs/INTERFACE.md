@@ -4,7 +4,7 @@
 
 The project recovered the minimum native interface needed to make the existing pump hardware programmable for bench research. The added interface is removable and connects at **ZPR 9909 A / CON2**.
 
-![Simplified native and added command paths](../system-overview.png)
+![Simplified native and added command paths](../media/images/system-overview.png)
 
 ## Native and added functions
 
@@ -46,5 +46,5 @@ The reproducible output of the project is the documented interface, firmware, re
 
 - [Signal captures](SIGNAL_CAPTURES.md): representative native recordings from development.
 - [Build & firmware](BUILD_AND_FIRMWARE.md): final interface implementation and operating documentation.
-- [Hardware and software](../Hardware_and_Software.md): tools, components, exploratory work, and historical gaps.
+- [Hardware and software](Hardware_and_Software.md): tools, components, exploratory work, and historical gaps.
 - [Demonstrations](DEMONSTRATIONS.md): pressure feedback and return to native control on the bench.

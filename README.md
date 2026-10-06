@@ -8,14 +8,17 @@ The pressure-control demo shows one use for that: the Arduino adjusts the pump i
 
 **Proof of concept · Tested on a saline bench loop · Research use only**
 
-[Watch the demos](#demonstrations) · [Project resources](#project-resources) · [More background](WHAT_AM_I_LOOKING_AT.md)
+[Watch the demos](#demonstrations) · [Project resources](#project-resources) · [More background](docs/WHAT_AM_I_LOOKING_AT.md)
 
 ## Demonstrations
 
-| Watch | What you're looking at |
+*Two quick bench demos. Cinematography was outside the scope of the project.*
+
+| Pressure control | Return to native control |
 | --- | --- |
-| **[Pressure control](PressureDemo_Revised.mp4)** | I change the resistance in the circuit, and the Arduino adjusts the pump command to bring the pressure signal back toward its starting value. |
-| **[Return to native control](RelayDemo_Revised.mp4)** | The relay switches control back to the original pump panel. The pump keeps running; this returns control to the panel, not a pump-stop command. |
+| [![Watch the pressure-control demo](media/images/pressure-control.jpg)](media/demos/pressure-control.mp4) | [![Watch the return-to-native-control demo](media/images/native-control-fallback.jpg)](media/demos/native-control-fallback.mp4) |
+| **[Watch video · 1 min](media/demos/pressure-control.mp4)** | **[Watch video · 56 sec](media/demos/native-control-fallback.mp4)** |
+| I change the resistance in the circuit, and the Arduino adjusts the pump command to bring the pressure signal back toward its starting value. | The relay switches control back to the original pump panel. The pump keeps running under native control. |
 
 [More about the setup and demos →](docs/DEMONSTRATIONS.md)
 
@@ -29,7 +32,7 @@ The SCP/SCPC is an older, relatively uncommon system. My goal was to show that t
 
 ## How it works
 
-![Overview of the pump, Arduino interface, relay, and pressure-feedback loop](system-overview.png)
+![Overview of the pump, Arduino interface, relay, and pressure-feedback loop](media/images/system-overview.png)
 
 The interface plugs in at **ZPR 9909 A / CON2** and intercepts only **DATA**. The original CLOCK, FRAME, TACH, motor drive, and pump electronics stay in place.
 
@@ -48,7 +51,7 @@ I decoded enough of the communication to make this interface work. Complete prot
 | Resource | What's in it |
 | --- | --- |
 | **[Build & firmware](docs/BUILD_AND_FIRMWARE.md)** | Start here if you want to reproduce the interface: illustrated guide, code, and operating instructions |
-| **[Hardware & software](Hardware_and_Software.md)** | Parts and tools I used, including details I couldn't recover from the development records |
+| **[Hardware & software](docs/Hardware_and_Software.md)** | Parts and tools I used, including details I couldn't recover from the development records |
 | **[Pressure instrumentation](docs/PRESSURE_INSTRUMENTATION.md)** | The sensor used for the demo, how the code reads it, and what would need attention for an experiment |
 | **[Signal captures](docs/SIGNAL_CAPTURES.md)** | Example logic-analyzer recordings from the reverse-engineering work |
 | **[Development costs](docs/DEVELOPMENT_COSTS.md)** | What I spent during development, including tools, supplies, and exploratory purchases |

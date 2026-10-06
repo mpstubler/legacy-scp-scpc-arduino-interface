@@ -34,6 +34,6 @@ The hardware, software, and documentation are provided as is, without warranty. 
 
 ## Build and license references
 
-[Build guide (PDF)](../SCP_SCPC_GitHub_Build_Guide.pdf) · [Firmware](../scp_scpc_pressure_control.ino) · [Pressure instrumentation](PRESSURE_INSTRUMENTATION.md)
+[Build guide (PDF)](SCP_SCPC_GitHub_Build_Guide.pdf) · [Firmware](../firmware/scp_scpc_pressure_control/scp_scpc_pressure_control.ino) · [Pressure instrumentation](PRESSURE_INSTRUMENTATION.md)
 
 Code is licensed under [PolyForm Noncommercial 1.0.0](../LICENSE-CODE.md). Original documentation, diagrams, and photographs are licensed under [CC BY-NC 4.0](../LICENSE-DOCS.md). Commercial use requires separate permission from the author.
