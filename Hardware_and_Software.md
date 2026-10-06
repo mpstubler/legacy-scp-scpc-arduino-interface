@@ -1,24 +1,22 @@
-# SCP SCPC Hardware Software and Recorded Costs
+# SCP/SCPC Hardware and Software Reference
+
+[Project home](README.md) · [Build & firmware](docs/BUILD_AND_FIRMWARE.md) · [Development costs](docs/DEVELOPMENT_COSTS.md)
 
 Matthew Stubler • Research build reference
 
 This document identifies the hardware, software, tools, and purchases documented during development of the removable Arduino interface for a permanently decommissioned Sorin SCP/SCPC centrifugal pump. It supports review of the project and planning a comparable bench build. The final interface requirements are separated from equipment used during reverse engineering and purchases whose eventual use is uncertain.
 
-The project demonstrated command replay, bounded command offsets, and pressure feedback in a recirculating saline circuit. Use this inventory alongside the [repository and illustrated build guide](https://github.com/mpstubler/legacy-scp-scpc-arduino-interface), which contain the wiring and operating details. This inventory alone is not an assembly procedure.
+The project demonstrated command replay, bounded command offsets, and pressure feedback in a recirculating saline circuit. Use this inventory alongside the [illustrated build guide](SCP_SCPC_GitHub_Build_Guide.pdf) and [firmware](scp_scpc_pressure_control.ino), which contain the wiring and operating details. This inventory alone is not an assembly procedure.
 
 Research use only. The system was demonstrated with surrogate fluid, not patients, animals, blood, or organs. Use only permanently decommissioned equipment. Relay fallback restores native DATA control; it does not stop the pump.
 
-# **Recorded spending**
+## Development costs
 
-The 30 purchase lines total **\$268.09 before tax**, including **\$8.49 in shipping or fees**. The workbook reports **\$291.21 as “actual spent”** after rounding. The \$23.12 difference is not allocated to individual items in this document. These are historical recorded purchases, not current quotations or a complete cost to reproduce the system.
+The [development cost record](docs/DEVELOPMENT_COSTS.md) contains the historical spending summary, chart, and all 30 itemized purchases. It distinguishes development spending from the requirements for reproducing one interface.
 
-![Recorded development spending by category](recorded_expenses.png)
+## Hardware for the final interface
 
-The chart preserves the expense workbook’s original categories, including historical classifications that do not describe the final circuit. Both workbook tabs repeat the same purchases; each line is counted once. Existing pump equipment, computers, development time, and unitemized supplies are outside this purchase total.
-
-# **Hardware for the final interface**
-
-Quantities below describe one interface where the build guide specifies them. Expense amounts later in this document are purchase-line totals and may cover multipacks or spare inventory. Manufacturer links identify the component family; they do not establish that a current retail revision is identical to the tested unit.
+Quantities below describe one interface where the build guide specifies them. Expense amounts in the [development cost record](docs/DEVELOPMENT_COSTS.md) are purchase-line totals and may cover multipacks or spare inventory. Manufacturer links identify the component family; they do not establish that a current retail revision is identical to the tested unit.
 
 | Component and quantity | Function in this project | Identification and source |
 | :---- | :---- | :---- |
@@ -35,9 +33,11 @@ Quantities below describe one interface where the build guide specifies them. Ex
 | Removable DuPont-style Y-harness, one assembly | Extends the native connection, provides monitoring taps, and intercepts only DATA. | Fabricated from connectors, crimp contacts, and leads. A 2 × 3 female housing mates with CON2 in the documented build. Verify connector orientation and the manufacturer pin numbering in the guide. |
 | Headers, sockets, hookup wire, insulation and strain relief | Mechanical assembly and repeatable interconnection. | 14-pin IC sockets, DuPont kits, 22-AWG silicone wire, terminal blocks, and heat shrink appear in the expense record. Exact installed quantities were not recorded. |
 
-# **Pressure circuit and bench equipment**
+## Pressure circuit and bench equipment
 
 The pressure demonstration adds a sensor and hydraulic loop to the command interface. Independent pressure measurement is needed to establish and observe the operating condition; the Arduino maintained a captured sensor signal rather than a calibrated pressure value.
+
+See [pressure instrumentation](docs/PRESSURE_INSTRUMENTATION.md) for the demonstration's ADC-based control values and measurement limitations.
 
 ***Experimental-use recommendation:*** 
 
@@ -59,7 +59,7 @@ The pressure-control demonstration intentionally used inexpensive generic compon
 
 A particular computer brand is not a requirement of the interface. Reliable USB communication and a supported programming/capture environment matter. The published firmware performs feedback control on the Arduino; the host provides programming and serial interaction.
 
-# **Software used in development and operation**
+## Software used in development and operation
 
 Historical application, operating-system, board-package, and library versions were not systematically recovered. Links below point to official documentation or upstream projects, not an assertion that the current release is the version used in the experiments.
 
@@ -78,7 +78,7 @@ Historical application, operating-system, board-package, and library versions we
 
 The firmware uses a 10-bit ADC setting. It schedules sensor sampling/filtering at 20-ms intervals and feedback calculations at 50-ms intervals. These are cooperative-loop schedules, not a claim of guaranteed hard-real-time deadlines. The recorded smoothing factor is 0.45 for the new reading, and the deadband is ±2 ADC counts. See the code for command acceptance, arming, and limit behavior.
 
-# **Exploratory tools and other purchases**
+## Exploratory tools and other purchases
 
 The isolated [Makerbase MKS CANable Pro](https://github.com/makerbase-mks/CANable-MKS) was used to investigate the upstream candidate CAN connection. No decodable native frames were observed under the reported test conditions. The final interface uses the downstream DATA/CLOCK/FRAME connection, so a CAN adapter is not required to operate that interface. Adapter firmware version and hardware revision were not recovered.
 
@@ -90,53 +90,13 @@ The [Adafruit Parts Pal](https://www.adafruit.com/product/2975) is a component a
 
 ChatGPT and Gemini assisted with technical explanations, code, analysis, and writing, as disclosed in the manuscript. They were development aids and are not required to run the interface. Specific model versions and attributable subscription costs were not recorded. Google Docs, Google Sheets, and GitHub were used to maintain the project documentation, expense record, and public distribution.
 
-# **What remains unidentified**
+## What remains unidentified
 
 Remaining historical details include the exact original pressure-sensor listing and its electrical transfer function, accuracy, and wire assignments; the power-supply model/rating; relay-board revision; software/core versions; and disposable circuit/monitoring model numbers. A present-day replacement specification for the pressure sensor is given above, but its actual electrical output and pinout must still be verified before connection. The transistor and passive components lack separately attributed costs. Exact marketplace listings for generic tools and consumables were not recovered; replacement listings are not presented as the original purchases.
 
-A minimum one-unit build cost cannot be derived reliably from this ledger because purchased quantities, spare inventory, unitemized components, and existing equipment are mixed. The complete recorded purchase total is retained instead of inventing a reduced bill of materials.
+A minimum one-unit build cost cannot be derived reliably from this ledger because purchased quantities, spare inventory, unitemized components, and existing equipment are mixed. The [development cost record](docs/DEVELOPMENT_COSTS.md) retains the complete purchase total instead of inventing a reduced bill of materials.
 
-# **Itemized recorded purchases**
-
-Amounts are USD purchase-line totals before tax. Descriptions and categories below follow the source spreadsheet, including provisional or outdated purpose labels. The final-build sections above establish actual use where later evidence is available. The companion RECORDED\_EXPENSES.csv retains dates, original project-specific flags, purposes, and notes for all 30 lines.
-
-| Recorded item | Vendor | Original category | USD |
-| :---- | :---- | :---- | ----: |
-| MKS CANable Pro (Isolated) | AliExpress | Signal Analysis | 23.81 |
-| MHCN United Co. Ltd Order | AliExpress | Misc Electronics | 16.58 |
-| HiLetgo 24MHz 8CH Logic Analyzer | Amazon | Signal Analysis | 12.69 |
-| IC Test Clip Set | AliExpress | Signal Access | 10.37 |
-| P1308B Probe/Test Lead Kit | AliExpress | Measurement | 13.13 |
-| Soldering Clamp Set | AliExpress | Fabrication | 2.32 |
-| SN-58B Ratcheting Crimper | AliExpress | Harness Fabrication | 10.95 |
-| MB-102 Breadboard Kit | AliExpress | Prototyping | 4.88 |
-| 620pc Dupont Header Kit | AliExpress | Connectors | 6.21 |
-| Dupont Jumper Kit 20cm | AliExpress | Connectors | 6.02 |
-| Nano Expansion Shield | AliExpress | Breakout Hardware | 2.13 |
-| Dupont Jumper Kit 10cm | AliExpress | Connectors | 5.53 |
-| Arduino Uno R4 Minima | Micro Center | Microcontroller | 19.99 |
-| Adafruit Parts Pal | Micro Center | Organization | 19.95 |
-| SN74HC125N Quad Bus Buffer | Mouser | Injection Hardware | 6.30 |
-| DFRobot Gravity Relay Module | Mouser | Automation | 6.66 |
-| 14-pin IC Sockets | Mouser | Prototyping | 5.94 |
-| SparkFun TXS0108E Level Shifter | Mouser | Injection Hardware | 7.13 |
-| KF301 Screw Terminal Blocks | Mouser | Connectors | 4.18 |
-| Shipping / Fees | Mouser | Shipping | 8.49 |
-| FR4 Prototype PCB Boards | AliExpress | Prototyping | 4.02 |
-| 22 AWG Silicone Wire | AliExpress | Wiring | 2.62 |
-| Brass NPT Hose Barb Fitting | AliExpress | Fluid System | 4.00 |
-| KF301 Screw Terminal Kit | AliExpress | Connectors | 7.91 |
-| 5V 30 PSI Pressure Transducer | AliExpress | Instrumentation | 11.51 |
-| Heat Shrink Kit | AliExpress | Wiring | 3.80 |
-| IPSG Jumper Wire Bundle 3pcs | Micro Center | Wiring | 9.99 |
-| iFixit Solder Tip Cleaner | Micro Center | Fabrication | 9.99 |
-| SchmartBoard 0.1in Spacing 80 Dual Row | Micro Center | Prototyping | 8.49 |
-| Adafruit Perma-Proto 3 Pack | Micro Center | Prototyping | 12.50 |
-| **Total before tax** |  |  | **268.09** |
-
-The workbook reports “actual spent” as 291.2127625, displayed here as **\$291.21**. That value equals the subtotal multiplied by 1.08625, consistent with an 8.625% tax adjustment. This arithmetic does not independently verify receipts or tax treatment for each transaction. No tax has been allocated across the chart categories.
-
-# **Evidence and document status**
+## Evidence and document status
 
 This reference reconciles the Canonical Dossier and Workday Timeline with the chronological Activity Log, the Project running total workbook, the current manuscript, and the public build guide and firmware. The dossier is primarily an index; final hardware descriptions follow the later build documentation. Historical purchase classifications are retained only as accounting records. Private working-document links, institutional correspondence, and personal order identifiers are omitted from this public-facing reference.
 
