@@ -6,9 +6,9 @@ The two demonstrations show the recovered command interface in use on a surrogat
 
 ## Pressure-feedback control
 
-[![Watch the pressure-control demonstration](../media/images/pressure-control.jpg)](../media/demos/pressure-control.mp4)
+[![Watch the pressure-control demonstration](../media/images/pressure-control.jpg)](../media/demos/PressureDemo_1080p30_SquareView.mp4)
 
-**[Watch the pressure-control demonstration · 1 min](../media/demos/pressure-control.mp4)**
+**[Watch the pressure-control demonstration · 1 min](../media/demos/PressureDemo_1080p30_SquareView.mp4)**
 
 The operator first establishes a bench operating condition under native control. Starting pressure mode captures the current filtered pressure-sensor reading and accepted native command. The Arduino then adjusts the replacement command around that baseline in response to changes in the pressure signal.
 
@@ -18,15 +18,15 @@ The target and feedback are **ADC counts, not calibrated pressure units**. This 
 
 [Pressure instrumentation and control units →](PRESSURE_INSTRUMENTATION.md)
 
-## Return to native control
+## Direct RPM control
 
-[![Watch the relay demonstration](../media/images/native-control-fallback.jpg)](../media/demos/native-control-fallback.mp4)
+[![Watch the direct RPM control demonstration](../media/images/native-control-fallback.jpg)](../media/demos/RelayDemo_1080p30_Boxed.mp4)
 
-**[Watch the relay demonstration · 56 sec](../media/demos/native-control-fallback.mp4)**
+**[Watch the direct RPM control demonstration · 56 sec](../media/demos/RelayDemo_1080p30_Boxed.mp4)**
 
-Deenergizing the interface relay restores a direct native DATA path from the original pump panel to the motor-control board. The panel resumes command authority.
+The Arduino changes pump speed by replacing the internal control command with a bounded offset from the captured baseline. Releasing external control deenergizes the interface relay and restores a direct native DATA path from the original pump panel to the motor-control board. The panel resumes command authority.
 
-**Returning to native control does not stop the pump.** This is a command-path fallback demonstration, not evidence of a general fault-detection or pump-shutdown system.
+**Returning to native control does not stop the pump.** The return to native control demonstrates command-path fallback, not evidence of a general fault-detection or pump-shutdown system.
 
 [Relay architecture and research-use limitations →](SAFETY.md)
 
