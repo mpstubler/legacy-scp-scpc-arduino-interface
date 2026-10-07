@@ -24,7 +24,7 @@ My interest is organ-perfusion research, where the pump could adjust itself in r
 
 No. I identified an exploit that allowed semi-autonomous control and reverse-engineered only what I needed to use it. This doesn’t replace the console or fully emulate its protocol.
 
-It’s a proof of concept using one old pump. The goal was to demonstrate that this is a practical approach for decommissioned hardware.
+It’s a DIY proof of concept using one old pump. The goal was to demonstrate that this is a practical approach for decommissioned hardware.
 
 ## I’d like to get involved.
 
