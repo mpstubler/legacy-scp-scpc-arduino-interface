@@ -1,6 +1,6 @@
 # Build & firmware
 
-[Project home](../README.md) · [Build & firmware](BUILD_AND_FIRMWARE.md) · [Interface](INTERFACE.md)
+[Project home](../README.md) · [Orientation](WHAT_AM_I_LOOKING_AT.md) · [Interface](INTERFACE.md)
 
 This page is the entry point for understanding or reproducing the documented bench interface. The illustrated PDF contains the wiring, photographs, connector reference, and operating procedure; this page does not replace those assembly instructions.
 
