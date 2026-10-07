@@ -30,7 +30,7 @@ It’s a proof of concept using one old pump. The goal was to demonstrate that t
 
 Excellent—that was the point! This wasn’t supposed to end with one old pump.
 
-If you’re interested in reverse engineering perfusion equipment or building on this work, contact me. Let’s talk.
+If you’re interested in reverse engineering perfusion equipment or building on this work, [contact me through LinkedIn](https://www.linkedin.com/in/mstubler). Let’s talk. (No email listed here to prevent spam.)
 
 ## What am I seeing in the demos?
 
