@@ -26,7 +26,7 @@ The target and feedback are **ADC counts, not calibrated pressure units**. This 
 
 The Arduino changes pump speed by replacing the internal control command with a bounded offset from the captured baseline. Releasing external control deenergizes the interface relay and restores a direct native DATA path from the original pump panel to the motor-control board. The panel resumes command authority.
 
-**Returning to native control does not stop the pump.** The return to native control demonstrates command-path fallback, not evidence of a general fault-detection or pump-shutdown system.
+**Returning to native control does not stop the pump.** This demonstrates command-path fallback; it does not establish a general fault-detection or pump-shutdown system.
 
 [Relay architecture and research-use limitations →](SAFETY.md)
 
