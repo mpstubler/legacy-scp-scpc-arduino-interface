@@ -8,7 +8,7 @@ It’s an early-2000s-era Sorin/Stöckert centrifugal blood pump. This one is re
   <img src="../media/images/pump-saline-loop.png" alt="Retired SCP/SCPC pump with a saline bench loop" width="550">
 </p>
 
-## What did you do?
+## What did you do for this project?
 
 I built a removable Arduino man-in-the-middle interface between the control panel and motor drive. It intercepts and modifies the pump commands so software can control pump speed. A relay restores the original control path when external control is released.
 
