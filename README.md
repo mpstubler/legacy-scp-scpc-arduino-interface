@@ -1,65 +1,40 @@
 # SCP/SCPC — Arduino Pump Interface
 
-**Adding programmable control to a retired perfusion pump.**
+**Programmable control of decommissioned perfusion hardware for research.**
 
-This project uses a Sorin/Stöckert SCP/SCPC centrifugal pump with a removable Arduino interface. I reverse-engineered the commands sent between its control panel and motor drive, then used that connection to read, replay, and modify those commands.
+A removable Arduino interface for the Sorin/Stöckert SCP/SCPC centrifugal pump, demonstrating direct pump-speed control and pressure-feedback automation.
 
-The pressure-control demo shows one use for that: the Arduino adjusts the pump in response to changes in circuit pressure.
+## [Lost or confused? Click here →](docs/WHAT_AM_I_LOOKING_AT.md)
 
-**Proof of concept · Tested on a saline bench loop · Research use only**
+An orientation page introducing the project, its purpose, and its scope:
 
-[Watch the demos](#demonstrations) · [Project resources](#project-resources) · [More background](docs/WHAT_AM_I_LOOKING_AT.md)
+- The original equipment and the added interface
+- Research applications for programmable perfusion hardware
+- Demonstrated capabilities and current limitations
+- Opportunities for collaboration and further development
 
 ## Demonstrations
 
 *Two quick bench demos. Cinematography was outside the scope of the project.*
 
-| Pressure control | Return to native control |
+**Proof of concept · Saline bench testing · Research use only**
+
+| Pressure control | Direct RPM control |
 | --- | --- |
-| [![Watch the pressure-control demo](media/images/pressure-control.jpg)](media/demos/pressure-control.mp4) | [![Watch the return-to-native-control demo](media/images/native-control-fallback.jpg)](media/demos/native-control-fallback.mp4) |
-| **[Watch video · 1 min](media/demos/pressure-control.mp4)** | **[Watch video · 56 sec](media/demos/native-control-fallback.mp4)** |
-| I change the resistance in the circuit, and the Arduino adjusts the pump command to bring the pressure signal back toward its starting value. | The relay switches control back to the original pump panel. The pump keeps running under native control. |
+| [![Watch the pressure-control demonstration](media/images/pressure-control.jpg)](media/demos/PressureDemo_1080p30_SquareView.mp4) | [![Watch the direct RPM control demonstration](media/images/native-control-fallback.jpg)](media/demos/RelayDemo_1080p30_Boxed.mp4) |
+| **[Watch video →](media/demos/PressureDemo_1080p30_SquareView.mp4)** | **[Watch video →](media/demos/RelayDemo_1080p30_Boxed.mp4)** |
+| The Arduino adjusts pump speed in response to changes in circuit resistance, returning the pressure-sensor signal toward its baseline. | The Arduino changes pump speed by replacing the internal control command. Releasing the interface restores control to the original panel. |
 
-[More about the setup and demos →](docs/DEMONSTRATIONS.md)
+## Project documentation
 
-## Why I built this
-
-I’m interested in automation for ex vivo perfusion research, particularly organ preservation. A lot of that work involves watching measurements and making adjustments at the pump. I wanted to see how much of that I could automate using hardware that was already available.
-
-Retired clinical equipment can still have useful life left in it as research equipment. This pump already had the motor drive and pumping hardware. What I needed was a way to tell it what to do.
-
-The SCP/SCPC is an older, relatively uncommon system. My goal was to show that this approach works well enough to justify trying it on newer, more common hardware. Each system would need its own interface work and testing.
-
-## How it works
-
-![Overview of the pump, Arduino interface, relay, and pressure-feedback loop](media/images/system-overview.png)
-
-The interface plugs in at **ZPR 9909 A / CON2** and intercepts only **DATA**. The original CLOCK, FRAME, TACH, motor drive, and pump electronics stay in place.
-
-| Existing system | What I added | What it does |
-| --- | --- | --- |
-| Native commands and timing | Arduino decoding and replay | Reads the pump command and sends a replacement with a bounded adjustment |
-| Original control panel | Relay and direct DATA bypass | Returns control to the panel when the relay is deenergized |
-| Saline bench loop | Pressure sensor and feedback code | Adjusts the command around an operator-selected starting point |
-
-I decoded enough of the communication to make this interface work. Complete protocol emulation wasn’t part of the project.
-
-[More about the interface and reverse engineering →](docs/INTERFACE.md)
-
-## Project resources
-
-| Resource | What's in it |
+| Resource | Contents |
 | --- | --- |
-| **[Build & firmware](docs/BUILD_AND_FIRMWARE.md)** | Start here if you want to reproduce the interface: illustrated guide, code, and operating instructions |
-| **[Hardware & software](docs/Hardware_and_Software.md)** | Parts and tools I used, including details I couldn't recover from the development records |
-| **[Pressure instrumentation](docs/PRESSURE_INSTRUMENTATION.md)** | The sensor used for the demo, how the code reads it, and what would need attention for an experiment |
-| **[Signal captures](docs/SIGNAL_CAPTURES.md)** | Example logic-analyzer recordings from the reverse-engineering work |
-| **[Development costs](docs/DEVELOPMENT_COSTS.md)** | What I spent during development, including tools, supplies, and exploratory purchases |
-| **[Safety & research scope](docs/SAFETY.md)** | How fallback works, what was tested, and the full disclaimer |
+| **[Interface overview](docs/INTERFACE.md)** | System architecture, command interception, and native-control fallback |
+| **[Build & firmware](docs/BUILD_AND_FIRMWARE.md)** | Illustrated assembly guide, Arduino code, component references, and operating instructions |
+| **[Demonstration notes](docs/DEMONSTRATIONS.md)** | Experimental setup, control behavior, and measurement limitations |
+| **[Safety & research scope](docs/SAFETY.md)** | Tested conditions, fallback limitations, and use restrictions |
 
 ## Research use and licensing
-
-I tested this with saline on the bench. It has not been validated for animal, cadaveric, or isolated-organ work. The pressure demo uses a sensor signal as its target, not a calibrated pressure setting.
 
 **Use only permanently decommissioned equipment. Not for clinical or patient-care use. Do not return modified or interfaced equipment to clinical service.**
 
