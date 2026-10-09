@@ -4,7 +4,7 @@
 
 A removable Arduino interface for the Sorin/Stöckert SCP/SCPC centrifugal pump, demonstrating direct pump-speed control and pressure-feedback automation.
 
-## [Lost or confused? Click here →](docs/WHAT_AM_I_LOOKING_AT.md)
+## [Lost or confused? Orientation Page here →](docs/WHAT_AM_I_LOOKING_AT.md)
 
 An orientation page introducing the project, its purpose, and its scope:
 
