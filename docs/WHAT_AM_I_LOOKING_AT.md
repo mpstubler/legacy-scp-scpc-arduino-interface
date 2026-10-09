@@ -12,7 +12,7 @@ It’s an early-2000s-era Sorin/Stöckert centrifugal blood pump. This one is re
 
 I built a removable Arduino man-in-the-middle interface between the control panel and motor drive. It intercepts and modifies the pump commands so software can control pump speed. A relay restores the original control path when external control is released.
 
-## You jailbroke an old heart-lung machine? Why would someone want to do that?
+## So you hacked an old heart-lung machine? Why would someone want to do that?
 
 Sort of. This is upcycling for research.
 
