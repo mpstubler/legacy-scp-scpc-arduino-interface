@@ -2,7 +2,7 @@
 
 ## This is an SCP.
 
-It’s an early-2000s-era Sorin/Stöckert centrifugal blood pump. This one is retired from clinical service, and I attached an Arduino to it.
+It’s an early-2000s-era Sorin/Stöckert centrifugal blood pump. This one is retired from clinical service. I made it semiautomatic by attaching an Arduino to it.
 
 <p align="center">
   <img src="../media/images/pump-saline-loop.png" alt="Retired SCP/SCPC pump with a saline bench loop" width="550">
@@ -14,7 +14,7 @@ I built a removable Arduino man-in-the-middle interface between the control pane
 
 ## So you hacked an old heart-lung machine? Why would someone want to do that?
 
-Sort of. This is upcycling for research.
+Yes, because this is upcycling for research.
 
 Research equipment is expensive. Retired clinical pumps can be cheap and available, but they weren’t designed for custom research automation. Making them programmable lets us reuse capable blood-handling hardware for experiments that would otherwise require manual adjustments or a purpose-built system.
 
