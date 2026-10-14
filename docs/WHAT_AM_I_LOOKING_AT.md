@@ -18,7 +18,7 @@ Yes, because this is upcycling for research.
 
 Research equipment is expensive. Retired clinical pumps can be cheap and available, but they weren’t designed for custom research automation. Making them programmable lets us reuse capable blood-handling hardware for experiments that would otherwise require manual adjustments or a purpose-built system.
 
-My interest is organ-perfusion research, where the pump could adjust itself in response to sensor measurements.
+This was specifically designed around automating exvivo organ perfusion experiments.
 
 ## Is this finished?
 
