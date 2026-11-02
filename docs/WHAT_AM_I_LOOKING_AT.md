@@ -14,7 +14,7 @@ I built a removable Arduino man-in-the-middle interface between the control pane
 
 ## So you hacked an old heart-lung machine? Why would someone want to do that?
 
-Yes, because this is upcycling for research.
+Yes, because this is proof that retired platforms can be upcycled for research.
 
 Research equipment is expensive. Retired clinical pumps can be cheap and available, but they weren’t designed for custom research automation. Making them programmable lets us reuse capable blood-handling hardware for experiments that would otherwise require manual adjustments or a purpose-built system.
 
