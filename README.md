@@ -1,6 +1,6 @@
 # SCP/SCPC — Arduino Pump Interface
 
-**Programmable control of decommissioned perfusion hardware for research.**
+**Proof-of-Concept programmable control of decommissioned perfusion hardware for research.**
 
 A removable Arduino interface for the Sorin/Stöckert SCP/SCPC centrifugal pump, demonstrating direct pump-speed control and pressure-feedback automation.
 
